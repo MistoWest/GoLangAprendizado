@@ -16,4 +16,7 @@ func main() {
 	fmt.Println(slice)
 	fmt.Printf("%d %d \n", len(slice), cap(slice))
 
+	sl2 := make([]float32, 5)
+	fmt.Println(sl2)
+
 }
