@@ -1,0 +1,27 @@
+def insertion_sort(array):
+    # Percorre o array começando do segundo elemento
+    for i in range(1, len(array)):
+        # Elemento atual que será posicionado
+        chave = array[i]
+        
+        # Elemento anterior
+        j = i - 1
+        
+        # Move elementos do array[0...i-1] que são maiores que a chave
+        # para uma posição à frente de sua posição atual
+        while j >= 0 and array[j] > chave:
+            array[j + 1] = array[j]
+            j -= 1
+            
+        # Insere a chave na posição correta
+        array[j + 1] = chave
+
+# Exemplo de uso
+if __name__ == "__main__":
+    # Array de exemplo
+    array = [64, 34, 25, 12, 22, 11, 90]
+    print("Array original:", array)
+    
+    # Chamando a função de ordenação
+    insertion_sort(array)
+    print("Array ordenado:", array)
